@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shooping Cart | Register Page</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/framework.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content justify-center">
+          <a href="index.html" class="brand">Shooping Cart</a>
+          <nav>
+            <ul class="d-flex">
+              <li><a href="login.html">Sign In</a></li>
+              <li><a href="register.html">Sign Up</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="sign-form">
+      <h2>Register</h2>
+      <form>
+        <input type="text" placeholder="Enter username" id="user-name"/>
+        <input type="email" placeholder="Enter email" id="email"/>
+        <input type="password" placeholder="Enter password" id="password"/>
+        <input type="submit" value="Sign Up" id="sign-up"/>
+        <div class="error"></div>
+      </form>
+    </section>
+    <script src="js/register.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

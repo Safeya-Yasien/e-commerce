@@ -1,0 +1,152 @@
+:root {
+  --black-color: #000;
+  --dark-color: #191919;
+  --links-color: #cbcbcb;
+  --white-color: #fff;
+  --main-transition: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 0px 15px;
+  margin: 0px auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+header {
+  background-color: var(--dark-color);
+  padding: 15px 0;
+}
+
+header .header-content .brand {
+  font-size: 1.875rem;
+  color: var(--links-color);
+}
+
+header .header-content nav ul.user-sign-info{
+  display: none;
+}
+
+header .header-content nav ul li a {
+  color: var(--links-color);
+  display: block;
+  padding: 5px 10px;
+  transition: var(--main-transition);
+}
+
+header .header-content nav ul li a:hover {
+  color: var(--white-color);
+}
+
+/* sign form */
+.sign-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--black-color);
+  padding: 20px;
+  width: 40%;
+}
+
+@media (max-width: 767px) {
+  .sign-form {
+    width: 80%;
+  }
+}
+
+.sign-form h2 {
+  text-align: center;
+  color: #ffffffcf;
+  margin-bottom: 20px;
+}
+
+.sign-form form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.sign-form form input:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.sign-form form input:focus {
+  outline: none;
+}
+
+.sign-form form input[type="submit"] {
+  background-color: #444444;
+  color: #f5f5f5;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.sign-form form input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+.invalid {
+  margin-top: 15px;
+  color: #d30606;
+}
+
+
+/*header index */
+
+
+
+
+.welcome-user .welcome{
+  background-color: #000;
+  color: #cbcbcb;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
