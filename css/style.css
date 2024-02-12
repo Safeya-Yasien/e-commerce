@@ -63,11 +63,62 @@ header .header-content .brand {
   color: var(--links-color);
 }
 
-header .header-content nav ul.user-sign-info{
+header .header-content nav ul li {
+  position: relative;
+}
+
+header .header-content nav ul.user-sign-info {
   display: none;
 }
 
-header .header-content nav ul li a {
+header .header-content nav ul.user-sign-info .shopping-cart {
+  display: block;
+  color: var(--links-color);
+}
+
+header .header-content nav ul.user-sign-info .badge {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -9px;
+  left: 22px;
+  background-color: var(--white-color);
+  color: #0879c9;
+  display: none;
+}
+
+header .header-content nav ul.user-sign-info .shopping-product {
+  background: var(--links-color);
+  position: absolute;
+  padding: 6px 10px;
+  width: 150px;
+  text-align: center;
+  top: 45px;
+  left: -50px;
+  display: none;
+}
+
+header .header-content nav ul.user-sign-info .shopping-product p {
+  color: #0879c9;
+  margin-bottom: 5px;
+}
+header
+  .header-content
+  nav
+  ul.user-sign-info
+  .shopping-product
+  .view-shopping-products {
+  color: var(--black-color);
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+header .header-content nav ul li > a {
   color: var(--links-color);
   display: block;
   padding: 5px 10px;
@@ -126,6 +177,21 @@ header .header-content nav ul li a:hover {
   transition: var(--main-transition);
 }
 
+.have-account {
+  text-align: center;
+  display: block;
+  color: var(--links-color);
+}
+
+.have-account a {
+  color: var(--links-color);
+  transition: var(--main-transition);
+}
+
+.have-account a:hover {
+  color: var(--white-color);
+}
+
 .sign-form form input[type="submit"]:hover {
   opacity: 0.8;
 }
@@ -135,18 +201,91 @@ header .header-content nav ul li a:hover {
   color: #d30606;
 }
 
-
-/*header index */
-
-
-
-
-.welcome-user .welcome{
-  background-color: #000;
-  color: #cbcbcb;
-  padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* start main */
+main {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-top: 10px;
 }
+
+@media (max-width: 767px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+/* start products */
+.col-1,
+.col-2 {
+  flex: 1;
+}
+
+.products {
+  width: 48%;
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .products {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+
+.products .products-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.products .product {
+  background-color: var(--black-color);
+}
+
+.products .product .product-info {
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.products .product .product-img {
+  max-width: 100%;
+}
+
+.products .product .product-name {
+  color: #0879c9;
+}
+
+.products .product .product-description {
+  color: #fffc;
+  font-size: 14px;
+}
+
+.products .product .product-price {
+  color: #0879c9;
+  font-weight: bold;
+}
+
+.products .product .add-to-cart {
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  font-size: 0.75em;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+
+.products .product .add-to-cart:hover {
+  color: var(--white-color);
+  background-color: var(--black-color);
+}
+
+.products .product {
+}
+
+/* end main */

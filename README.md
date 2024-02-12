@@ -8,29 +8,7 @@
 - prevent default event for button when click on it, refresh page<br>
 - add data to local storage<br>
 - <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
-- <br>
+
 <br>
 <hr>
 

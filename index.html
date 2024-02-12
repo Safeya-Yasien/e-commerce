@@ -21,13 +21,23 @@
         <div class="header-content justify-center">
           <a href="index.html" class="brand">Shooping Cart</a>
           <nav>
-            <ul  class="d-flex user-sign-field">
+            <ul class="d-flex user-sign-field">
               <li><a href="login.html">Sign In</a></li>
               <li><a href="register.html">Sign Up</a></li>
             </ul>
 
-            <ul class="d-flex user-sign-info">
+            <ul class="align-center user-sign-info">
               <li><a href="#" id="username"></a></li>
+              <li class="view-products">
+                <a href="#"
+                  ><i class="fa-solid fa-cart-shopping shopping-cart"></i
+                ></a>
+                <span class="badge"></span>
+                <div class="shopping-product">
+
+                  <a class="view-shopping-products" href="cartproducts.html">View all products</a>
+                </div>
+              </li>
               <li><a href="#" id="log-out">Log Out</a></li>
             </ul>
           </nav>
@@ -35,9 +45,25 @@
       </div>
     </header>
 
-    <section class="welcome-user">
-      <div class="welcome">HELLO</div>
-    </section>
+    <main>
+      <div class="col-1 products">
+        <div class="container">
+          <div class="products-content">
+            <!-- <div class="product">
+              <img class="product-img" src="imgs/phone-2.jpg" alt="phone-2" />
+              <div class="product-info">
+                <h2 class="product-name">OPPO A37f</h2>
+                <p class="product-description">
+                  Good product with excellent quality
+                </p>
+                <p class="product-price">$230.00</p>
+                <button class="add-to-cart">Add To Cart</button>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script src="js/main.js"></script>
   </body>
