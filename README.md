@@ -27,8 +27,8 @@ not done yet<br>
 - my products link in index page<br>
 - products length in profile html page<br>
 - create product page<br>
-- <br>
-- <br>
+- responsive mobile header<br>
+- why menu bar work only in index page<br>
 - <br>
 - <br>
 

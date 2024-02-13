@@ -30,7 +30,7 @@ function redirectToRegisterPage() {
 
 function displayProducts() {
   let product = products.map((item) => createProduct(item));
-  console.log(product)
+  console.log(product);
 }
 
 function createProduct(item) {
@@ -77,7 +77,6 @@ function createProduct(item) {
   productMainDiv.appendChild(productInfo);
 
   productsContent.appendChild(productMainDiv);
-
 }
 
 displayProducts();
@@ -90,8 +89,6 @@ function addProduct(id) {
       addProductToCart(choosenItem),
       shoppingProduct.firstChild
     );
-
-
 
     // number of added products to cart
     let shoppingProductsLength = document.querySelectorAll(
@@ -128,4 +125,14 @@ function openCartMenu() {
       shoppingProduct.style.display = "block";
     }
   }
+}
+
+let headerNav = document.querySelector("header nav");
+let menuBar = document.querySelector(".menu-bar");
+
+menuBar.addEventListener("click", showMenu);
+
+function showMenu() {
+  console.log("Menu bar clicked!");
+  headerNav.classList.toggle("show-bar");
 }

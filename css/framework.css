@@ -1,6 +1,6 @@
 /* start flex */
-.d-flex{
-    display: flex;
+.d-flex {
+  display: flex;
 }
 
 .justify-center {
@@ -16,3 +16,7 @@
 
 /* end flex */
 
+/* position */
+.p-relative {
+  position: relative;
+}
