@@ -13,7 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Cart Products</title>
+    <title>E-Commerce Shooping Cart</title>
   </head>
   <body>
     <header>
@@ -27,9 +27,16 @@
             </ul>
 
             <ul class="align-center user-sign-info">
+              <li class="lang-icon" id="en_lang">En</li>
+              <li class="lang-icon" id="ar_lang">Ar</li>
+
               <li><a href="#" id="username"></a></li>
+
+              <li><a href="favourites.html">Favorites</a></li>
+              <li><a href="my-products.html">My Products</a></li>
+
               <li class="view-products">
-                <a href="#"
+                <a href="profile.html"
                   ><i class="fa-solid fa-cart-shopping shopping-cart"></i
                 ></a>
                 <span class="badge"></span>
@@ -39,6 +46,7 @@
                   >
                 </div>
               </li>
+
               <li><a href="#" id="log-out">Log Out</a></li>
             </ul>
           </nav>
@@ -46,11 +54,24 @@
       </div>
     </header>
 
-    <section>
-      <div>HELLO</div>
-    </section>
+    <div class="profile">
+      <div class="container">
+        <div class="profile-content">
+          <img class="profile-img" src="imgs/profile.jpg" alt="profile" />
+          <div class="profile-info">
+            <h2 class="profile-user-name"></h2>
+            <p class="profile-user-email"></p>
+            <p class="profile-products-length">
+              Products Length: <span>10</span>
+            </p>
+            <a class="edit-profile" href="edit_profile.html">Edit Profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!-- <script src="js/products.js"></script> -->
-    <script src="js/cartproducts.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

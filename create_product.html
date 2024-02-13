@@ -13,7 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Cart Products</title>
+    <title>E-Commerce Shooping Cart</title>
   </head>
   <body>
     <header>
@@ -27,7 +27,14 @@
             </ul>
 
             <ul class="align-center user-sign-info">
-              <li><a href="#" id="username"></a></li>
+              <li class="lang-icon" id="en_lang">En</li>
+              <li class="lang-icon" id="ar_lang">Ar</li>
+
+              <li><a href="profile.html" id="username"></a></li>
+
+              <li><a href="favourites.html">Favorites</a></li>
+              <li><a href="my-products.html">My Products</a></li>
+
               <li class="view-products">
                 <a href="#"
                   ><i class="fa-solid fa-cart-shopping shopping-cart"></i
@@ -39,6 +46,7 @@
                   >
                 </div>
               </li>
+
               <li><a href="#" id="log-out">Log Out</a></li>
             </ul>
           </nav>
@@ -46,11 +54,25 @@
       </div>
     </header>
 
-    <section>
-      <div>HELLO</div>
+    <section class="create-product-container">
+      <div class="container">
+        <div class="create-product-content">
+          <form>
+            <input type="file" id="upload-product-img" />
+            <input type="text" placeholder="Name ..." id="product-name" />
+            <input
+              type="text"
+              placeholder="Description ..."
+              id="product-description"
+            />
+            <input type="text" placeholder="Price ..." id="product-price" />
+            <input id="create-product-button" type="submit" value="Create" />
+          </form>
+        </div>
+      </div>
     </section>
 
-    <!-- <script src="js/products.js"></script> -->
-    <script src="js/cartproducts.js"></script>
+    <script src="js/create_product.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

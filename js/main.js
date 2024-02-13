@@ -1,10 +1,3 @@
-//
-//
-//
-//
-//
-//
-
 let userField = document.querySelector(".user-sign-field");
 let userInfo = document.querySelector(".user-sign-info");
 let logOutButton = document.querySelector("#log-out");
@@ -13,7 +6,6 @@ let addToCartButton = document.querySelector(".add-to-cart");
 let shoppingCart = document.querySelector(".shopping-cart");
 let badge = document.querySelector(".badge");
 let shoppingProduct = document.querySelector(".shopping-product");
-
 let localStorageUserName = localStorage.getItem("username");
 
 if (localStorageUserName) {
@@ -36,85 +28,9 @@ function redirectToRegisterPage() {
   window.location.href = "./register.html";
 }
 
-// products
-
-const products = [
-  {
-    id: 1,
-    title: "OPPO A37f",
-    description: "Good product with excellent quality",
-    price: 230.0,
-    image: "imgs/phone-1.jpg",
-    altText: "phone-1",
-  },
-  {
-    id: 2,
-    title: "OPPO A37f",
-    description: "Good product with excellent quality",
-    price: 230.0,
-    image: "imgs/phone-2.jpg",
-    altText: "phone-2",
-  },
-  {
-    id: 3,
-    title: "OPPO A37f",
-    description: "Good product with excellent quality",
-    price: 230.0,
-    image: "imgs/phone-3.jpg",
-    altText: "phone-3",
-  },
-  {
-    id: 4,
-    title: "OPPO A37f",
-    description: "Good product with excellent quality",
-    price: 230.0,
-    image: "imgs/phone-4.jpg",
-    altText: "phone-4",
-  },
-  {
-    id: 5,
-    title: "OPPO A37f",
-    description: "Good product with excellent quality",
-    price: 230.0,
-    image: "imgs/phone-5.jpg",
-    altText: "phone-5",
-  },
-  {
-    id: 6,
-    title: "OPPO A37f",
-    description: "Good product with excellent quality",
-    price: 230.0,
-    image: "imgs/phone-6.jpg",
-    altText: "phone-6",
-  },
-  {
-    id: 7,
-    title: "Havit Headphone",
-    description: "Model Number: SD-1004",
-    price: 445.0,
-    image: "imgs/headphone-1.jpg",
-    altText: "headphone-1",
-  },
-  {
-    id: 8,
-    title: "Havit Headphone",
-    description: "Model Number: SD-1004",
-    price: 445.0,
-    image: "imgs/headphone-2.jpg",
-    altText: "headphone-2",
-  },
-  {
-    id: 9,
-    title: "Havit Headphone",
-    description: "Model Number: SD-1004",
-    price: 445.0,
-    image: "imgs/headphone-3.jpg",
-    altText: "headphone-3",
-  },
-];
-
 function displayProducts() {
   let product = products.map((item) => createProduct(item));
+  console.log(product)
 }
 
 function createProduct(item) {
@@ -128,6 +44,9 @@ function createProduct(item) {
 
   let productInfo = document.createElement("div");
   productInfo.className = "product-info";
+
+  let favouriteIcon = document.createElement("i");
+  favouriteIcon.className = "fa-solid fa-heart favourite";
 
   let productName = document.createElement("h2");
   productName.className = "product-name";
@@ -149,6 +68,7 @@ function createProduct(item) {
   });
 
   productMainDiv.appendChild(productImg);
+  productInfo.appendChild(favouriteIcon);
   productInfo.appendChild(productName);
   productInfo.appendChild(productDescription);
   productInfo.appendChild(productPrice);
@@ -157,27 +77,40 @@ function createProduct(item) {
   productMainDiv.appendChild(productInfo);
 
   productsContent.appendChild(productMainDiv);
+
 }
 
 displayProducts();
 
 function addProduct(id) {
-  let choosenItem = products.find((item) => item.id === id);
+  if (checkUser()) {
+    let choosenItem = products.find((item) => item.id === id);
 
-  shoppingProduct.insertBefore(
-    addProductToShopping(choosenItem),
-    shoppingProduct.firstChild
-  );
+    shoppingProduct.insertBefore(
+      addProductToCart(choosenItem),
+      shoppingProduct.firstChild
+    );
 
-  let shoppingProductsLength = document.querySelectorAll(".shopping-product p");
 
-  badge.style.display = "flex";
 
-  console.log(shoppingProductsLength);
-  badge.innerHTML = shoppingProductsLength.length;
+    // number of added products to cart
+    let shoppingProductsLength = document.querySelectorAll(
+      ".shopping-product p"
+    );
+    badge.style.display = "flex";
+    badge.innerHTML = shoppingProductsLength.length;
+  }
 }
 
-function addProductToShopping(item) {
+function checkUser() {
+  if (localStorage.getItem("username")) {
+    return true;
+  } else {
+    window.location = "login.html";
+  }
+}
+
+function addProductToCart(item) {
   const paragraph = document.createElement("p");
   paragraph.textContent = item.title;
   return paragraph;

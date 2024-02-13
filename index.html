@@ -27,17 +27,26 @@
             </ul>
 
             <ul class="align-center user-sign-info">
-              <li><a href="#" id="username"></a></li>
+              <li class="lang-icon" id="en_lang">En</li>
+              <li class="lang-icon" id="ar_lang">Ar</li>
+
+              <li><a href="profile.html" id="username"></a></li>
+
+              <li><a href="favourites.html">Favorites</a></li>
+              <li><a href="my-products.html">My Products</a></li>
+
               <li class="view-products">
                 <a href="#"
                   ><i class="fa-solid fa-cart-shopping shopping-cart"></i
                 ></a>
                 <span class="badge"></span>
                 <div class="shopping-product">
-
-                  <a class="view-shopping-products" href="cartproducts.html">View all products</a>
+                  <a class="view-shopping-products" href="cartproducts.html"
+                    >View all products</a
+                  >
                 </div>
               </li>
+              
               <li><a href="#" id="log-out">Log Out</a></li>
             </ul>
           </nav>
@@ -52,6 +61,7 @@
             <!-- <div class="product">
               <img class="product-img" src="imgs/phone-2.jpg" alt="phone-2" />
               <div class="product-info">
+                <i class="fa-solid fa-heart favourite"></i>
                 <h2 class="product-name">OPPO A37f</h2>
                 <p class="product-description">
                   Good product with excellent quality
@@ -65,6 +75,7 @@
       </div>
     </main>
 
+    <script src="js/products.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
