@@ -93,7 +93,7 @@ header .header-content nav ul.user-sign-info {
   }
 } */
 
-.menu-bar {
+header .menu-bar {
   color: var(--links-color);
   font-size: 20px;
   cursor: pointer;
@@ -101,7 +101,7 @@ header .header-content nav ul.user-sign-info {
 }
 
 @media (max-width: 767px) {
-  .menu-bar {
+  header .menu-bar {
     display: block;
   }
 }
